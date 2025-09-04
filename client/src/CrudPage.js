@@ -1,10 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import Axios  from 'axios'
 
-
 function CrudPage()
 {
-
     const [foodName,setFoodName]=useState("")
     const [description,setDescription]=useState("")
     const [foodList,setFoodList]=useState([]);
@@ -15,7 +13,6 @@ function CrudPage()
     },[])
 
     //AddFoodData
-
     const addFoodData=()=>{
         Axios.post("http://localhost:3001/insert",{foodName,description})
         .then((response)=>{
